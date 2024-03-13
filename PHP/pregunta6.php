@@ -9,15 +9,32 @@
 <body class="fondobatalla">
 <link href="enlace nivel 6"><img src="imagen nivel 6">
 
-
 <form method="get">
-<label>Pregunta 1:</label>
-<input type="text" name="pregunta1">
+<p>¿Qué tipo de Pokémon es Gengar?<p>
+<input type="radio" id="respuesta1" name="respuesta" value="a">
+<label for="respuesta1">a. Fantasma/Veneno</label><br> correcta
+<input type="radio" id="respuesta2" name="respuesta" value="b">
+<label for="respuesta2">b. Siniestro/Fantasma</label><br>
+<input type="radio" id="respuesta3" name="respuesta" value="c">
+<label for="respuesta3">c.  Veneno</label><br>
+<input type="radio" id="respuesta4" name="respuesta" value="d">
+<label for="respuesta4">d. Fantasma</label><br><br>
 <button>Enviar</button>
-</form>
+</form>  
 
 
+<?php 
 
+$respuesta_usuario=$_GET['respuesta'];  /*Recojo la respuesta del usuario*/
+
+if($respuesta_usuario=="a"){
+
+  header("Location:../inicio.html");
+}
+/*Si la respuesta del usuario es la "a", lo enviará a la pantalla inicial*/
+?>
+
+</body>
 
 <?php
 

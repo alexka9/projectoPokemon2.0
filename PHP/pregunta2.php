@@ -10,10 +10,43 @@
 <link href="enlace nivel 2"><img src="imagen nivel 2">
 
 <form method="get">
-<label>Pregunta 1:</label>
-<input type="text" name="pregunta1">
+<p>¿Qué tipo de Pokémon es Volcarona?<p>
+<input type="radio" id="respuesta1" name="respuesta" value="a">
+  <label for="respuesta1">a. Fuego/Volador</label><br>
+  <input type="radio" id="respuesta2" name="respuesta" value="b">
+  <label for="respuesta2">b. Bicho/fuego</label><br> 
+  <input type="radio" id="respuesta3" name="respuesta" value="c">
+  <label for="respuesta3">c.  Fuego</label><br>
+  <input type="radio" id="respuesta4" name="respuesta" value="d">
+  <label for="respuesta4">d. Agua</label><br><br> 
 <button>Enviar</button>
 </form>
+
+
+<?php 
+
+$respuesta_usuario=$_GET['respuesta'];  /*Recojo la respuesta del usuario*/
+
+if($respuesta_usuario=="b"){
+
+  header("Location:../inicio.html");
+}
+/*Si la respuesta del usuario es la "b", lo enviará a la pantalla inicial*/
+?>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
 
 <?php
 

@@ -41,13 +41,42 @@ h1{
 }
 
 .aliado{
-    width: 55vh;
-    padding-left: 55.5%;
-    padding-top: 40%;
+    width: 40vh;
+    padding-right: 56.5%;
+    position: relative;
+    top: -30vh;
 }
+    
 
 .rival{
     width: 45vh;
-    padding-left: 55.5%;
-    padding-bottom: 40%;
+    padding-left: 57.9%;
+    position: relative;
+    top: -35vh;
+    
+}
+
+
+form{
+    position: relative;
+    bottom: -78vh;
+    color: white;
+    font-family: "Arial", sans-serif;
+}
+.bajo{
+    position: relative;
+    bottom: 15vh;
+    margin-left: 150vh;
+    font-family: "Arial", sans-serif;
+    font-size: 1.5rem; 
+    padding: 1vh 7vh; 
+    background-color: #f00; 
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5vh; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+}
+.boton-pokemon:hover {
+    background-color: #ff4500; /
 }

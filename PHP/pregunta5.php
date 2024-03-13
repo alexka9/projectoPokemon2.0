@@ -10,16 +10,31 @@
   
 <link href="enlace nivel 5"><img src="imagen nivel 5">
 
-
-
-
 <form method="get">
-<label>Pregunta 1:</label>
-<input type="text" name="pregunta1">
+<p>¿Cuál es el Pokémon que evoluciona en Jolteon, Vaporeon o Flareon mediante diferentes métodos de evolución?<p>
+<input type="radio" id="respuesta1" name="respuesta" value="a">
+  <label for="respuesta1">a. Bulbasaur</label><br>
+  <input type="radio" id="respuesta2" name="respuesta" value="b">
+  <label for="respuesta2">b. Mew</label><br>
+  <input type="radio" id="respuesta3" name="respuesta" value="c">
+  <label for="respuesta3">c.  Eevee</label><br> correcta
+  <input type="radio" id="respuesta4" name="respuesta" value="d">
+  <label for="respuesta4">d. Pikachu</label><br><br>
 <button>Enviar</button>
 </form>
 
+<?php 
 
+$respuesta_usuario=$_GET['respuesta'];  /*Recojo la respuesta del usuario*/
+
+if($respuesta_usuario=="c"){
+
+  header("Location:../inicio.html");
+}
+/*Si la respuesta del usuario es la "c", lo enviará a la pantalla inicial*/
+?>
+
+</body>
 
 
 <?php

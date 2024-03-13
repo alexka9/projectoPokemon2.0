@@ -11,12 +11,39 @@
 
 
 <form method="get">
-<label>Pregunta 1:</label>
-<input type="text" name="pregunta1">
+<p>¿Cuál es el Pokémon legendario que representa el equilibrio entre el tiempo y el espacio?<p>
+<input type="radio" id="respuesta1" name="respuesta" value="a">
+  <label for="respuesta1">a. Palkia</label><br>
+  <input type="radio" id="respuesta2" name="respuesta" value="b">
+  <label for="respuesta2">b. Giratina</label><br>
+  <input type="radio" id="respuesta3" name="respuesta" value="c">
+  <label for="respuesta3">c.  Dialga</label><br> esta es la correcta
+  <input type="radio" id="respuesta4" name="respuesta" value="d">
+  <label for="respuesta4">d. Arceus</label><br><br>
 <button>Enviar</button>
-</form>
+</form> 
+
+<?php 
+
+$respuesta_usuario=$_GET['respuesta'];  /*Recojo la respuesta del usuario*/
+
+if($respuesta_usuario=="c"){
+
+  header("Location:../inicio.html");
+}
+/*Si la respuesta del usuario es la "c", lo enviará a la pantalla inicial*/
+?>
 
 
+
+
+
+
+
+
+
+
+</body>
 
 
 

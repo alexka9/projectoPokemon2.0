@@ -9,29 +9,58 @@
 <body class="fondobatalla">
   
 
-<form method="get">
-
-<label>Pregunta 1:</label>
-<input type="text" name="pregunta1">
-<button>Enviar</button>
+<form  method="get">
+ <p>¿Cuál es el Pokémon inicial de tipo fuego en la región de Kanto?<p>
+ <input type="radio" id="respuesta1" name="respuesta" value="a">
+  <label for="respuesta1">a. Bulbasaur</label><br>
+  <input type="radio" id="respuesta2" name="respuesta" value="b">
+  <label for="respuesta2">b. Charmander</label><br>
+  <input type="radio" id="respuesta3" name="respuesta" value="c">
+  <label for="respuesta3">c.  Squirtle</label><br>
+  <input type="radio" id="respuesta4" name="respuesta" value="d">
+  <label for="respuesta4">d. Pikachu</label><br><br>
+ <button class="bajo">Enviar</button>
 </form>
 
 
-<!-- <img class="rival" src="../IMG/candelabro enemigo (de frente).gif"> -->
-
-<img class="aliado" src="../IMG/umbreon_espaldas.gif">
-
-
-
-
-
+<div>
+  <img class="rival" src="../IMG/candelabro enemigo (de frente).gif">
+</div>
+<div>
+  <img class="aliado" src="../IMG/umbreon_espaldas.gif">
+</div>
 
 
+<?php 
+
+$respuesta_usuario=$_GET['respuesta'];  /*Recojo la respuesta del usuario*/
+
+if($respuesta_usuario=="b"){
+                                          /*Aquí pondré la barra de vida del rival a 0*/
+  header("Location:../inicio.html");
+}
+/*Si la respuesta del usuario es la "b", lo enviará a la pantalla inicial*/
+?>
+
+<progress id="file" max="100" value="100">100%</progress>
+
+<script>
+
+var respuesta_usuario = document.querySelector('input[name="respuesta"]:checked').value;
+var progressBar = document.getElementById("file");
+
+if (respuesta_usuario == 'b') {
+progressBar.value = 0;
+}
+
+</script>
+
+</body>
 
 
 
 
-<?php
+<!-- <?php
 
 session_start();
 
@@ -126,21 +155,21 @@ header(location:inicio.html);
 
 
 
-?>
+?> -->
 
-
+/*
 <form>
 <label>File progress:</label>
 <?php 
    $a=10; 
 ?>
 
-<progress  max="20" value=<?php "$a" ?>>100%</progress>
+<progress  max="20" value=<?php "$a"; ?>>100%</progress>
 
 </form>
 
 
-
+*/
 
 
 
