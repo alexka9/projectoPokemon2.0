@@ -33,3 +33,21 @@ h1{
     padding-top: 5%;
     width: 10%;
 }
+
+.fondobatalla{
+    background-image: url(../IMG/fondo_batalla.png);  
+    background-size: 213vh 100vh;
+    
+}
+
+.aliado{
+    width: 55vh;
+    padding-left: 55.5%;
+    padding-top: 40%;
+}
+
+.rival{
+    width: 45vh;
+    padding-left: 55.5%;
+    padding-bottom: 40%;
+}

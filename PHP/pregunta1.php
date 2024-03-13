@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilo.css">
     <title>Document</title>
 </head>
-<body>
+<body class="fondobatalla">
   
 
-
-
-
-
-
-
-
-
-
 <form method="get">
+
 <label>Pregunta 1:</label>
 <input type="text" name="pregunta1">
 <button>Enviar</button>
 </form>
 
 
+<!-- <img class="rival" src="../IMG/candelabro enemigo (de frente).gif"> -->
 
-
+<img class="aliado" src="../IMG/umbreon_espaldas.gif">
 
 
 
@@ -40,6 +34,8 @@
 <?php
 
 session_start();
+
+
 
 
 
@@ -76,7 +72,7 @@ echo "Te has equivocado";
 
 /* Recibir daño */
 
-$pv= $pv - $pd_rival;
+ $pv= $pv - $pd_rival;
 
 /* Si la vida llega a 0 salir del bucle y decir que has perdido el combate */
 
@@ -104,7 +100,7 @@ if ($pv<=0){
 
 /*GAME OVER*/
 
-header(location:GAME_OVER.php);
+// header("location:../GAME_OVER.html");
 
 $i=100000000000000;
 
@@ -117,8 +113,10 @@ if ($pv_rival<=0){
 
 $_SESSION['tick_1']=1;
 
+
 $i=1000000000000000;
 
+header(location:inicio.html);
 }
 
 }/*Fin del for*/
@@ -131,11 +129,15 @@ $i=1000000000000000;
 ?>
 
 
+<form>
+<label>File progress:</label>
+<?php 
+   $a=10; 
+?>
 
+<progress  max="20" value=<?php "$a" ?>>100%</progress>
 
-
-
-
+</form>
 
 
 

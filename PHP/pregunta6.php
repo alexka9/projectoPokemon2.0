@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilo.css">
     <title>Document</title>
 </head>
-<body>
-<link href="enlace nivel 6"<img src="imagen nivel 6">>
+<body class="fondobatalla">
+<link href="enlace nivel 6"><img src="imagen nivel 6">
 
 
 <form method="get">
